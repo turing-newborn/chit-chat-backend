@@ -35,10 +35,10 @@ public class ChatController {
 
         messagingTemplate.convertAndSendToUser(chatMessage.getRecipientId(), "/queue/messages",
                 new ChatNotification(
-                        chatMessage.getId(),
-                        chatMessage.getSenderId(),
-                        chatMessage.getRecipientId(),
-                        chatMessage.getContent()
+                        savedMessage.getId(),
+                        savedMessage.getSenderId(),
+                        savedMessage.getRecipientId(),
+                        savedMessage.getContent()
                 ));
 
     }
